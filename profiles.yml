@@ -1,0 +1,26 @@
+xero:
+  target: xero-ail
+
+    xero-ail:
+      type: sqlserver
+      driver: 'ODBC Driver 18 for SQL Server'
+      server: ailslsql.database.windows.net
+      port: 1433
+      database: ailsqldev
+      schema: xero
+      user: slmasi_admin
+      password: LERghr6RMSXWyt
+      retries: 2
+      threads: 10
+
+    xero-sl:
+      type: sqlserver
+      driver: 'ODBC Driver 18 for SQL Server'
+      server: ailslsql.database.windows.net
+      port: 1433
+      database: slsqldev
+      schema: xero
+      user: slmasi_admin
+      password: LERghr6RMSXWyt
+      retries: 2
+      threads: 10
