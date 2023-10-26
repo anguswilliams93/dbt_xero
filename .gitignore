@@ -1,4 +1,4 @@
-.env
+set_env_var.sh
 target/
 dbt_modules/
 logs/
