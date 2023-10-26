@@ -1,5 +1,5 @@
 xero:
-  target: "{{ env_var('vSQL_SERVER_NAME') }}"
+  target: "{{ env_var('DBT_TARGET=xero_ail') }}"
   outputs:
     xero_ail:
       type: sqlserver
