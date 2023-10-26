@@ -1,26 +1,26 @@
 xero:
   target: xero_ail
-
+  outputs:
     xero_ail:
       type: sqlserver
       driver: 'ODBC Driver 18 for SQL Server'
-      server: ailslsql.database.windows.net
+      server: "{{ env_var('vSQL_SERVER_NAME') }}"
       port: 1433
       database: ailsqldev
       schema: xero
-      user: slmasi_admin
-      password: LERghr6RMSXWyt
+      user: "{{ env_var('vSQL_USERNAME') }}"
+      password: "{{ env_var('vSQL_PASSWORD') }}"
       retries: 2
       threads: 10
 
     xero_sl:
       type: sqlserver
       driver: 'ODBC Driver 18 for SQL Server'
-      server: ailslsql.database.windows.net
+      server: "{{ env_var('vSQL_SERVER_NAME') }}"
       port: 1433
       database: slsqldev
       schema: xero
-      user: slmasi_admin
-      password: LERghr6RMSXWyt
+      user: "{{ env_var('vSQL_USERNAME') }}"
+      password: "{{ env_var('vSQL_PASSWORD') }}"
       retries: 2
       threads: 10
