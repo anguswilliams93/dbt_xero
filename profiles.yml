@@ -1,26 +1,26 @@
 xero:
-  target: xero_ail
+  target: "{{ env_var('vSQL_SERVER_NAME') }}"
   outputs:
     xero_ail:
       type: sqlserver
       driver: 'ODBC Driver 18 for SQL Server'
-      server: "{{ env_var('vSQL_SERVER_NAME') }}"
+      server: "{{ env_var('DBT_SQL_SERVER_NAME ') }}"
       port: 1433
       database: ailsqldev
-      schema: xero
-      user: "{{ env_var('vSQL_USERNAME') }}"
-      password: "{{ env_var('vSQL_PASSWORD') }}"
+      schema: dbtXero
+      user: "{{ env_var('DBT_SQL_USERNAME') }}"
+      password: "{{ env_var('DBT_SQL_PASSWORD') }}"
       retries: 2
       threads: 10
 
     xero_sl:
       type: sqlserver
       driver: 'ODBC Driver 18 for SQL Server'
-      server: "{{ env_var('vSQL_SERVER_NAME') }}"
+      server: "{{ env_var('DBT_SQL_SERVER_NAME ') }}"
       port: 1433
       database: slsqldev
-      schema: xero
-      user: "{{ env_var('vSQL_USERNAME') }}"
-      password: "{{ env_var('vSQL_PASSWORD') }}"
+      schema: dbtXero
+      user: "{{ env_var('DBT_SQL_USERNAME') }}"
+      password: "{{ env_var('DBT_SQL_PASSWORD') }}"
       retries: 2
       threads: 10
