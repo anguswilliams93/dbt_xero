@@ -1,10 +1,10 @@
 xero:
-  target: "{{ env_var('DBT_TARGET=xero_ail') }}"
+  target: "{{ env_var('DBT_TARGET') }}"
   outputs:
     xero_ail:
       type: sqlserver
       driver: 'ODBC Driver 18 for SQL Server'
-      server: "{{ env_var('DBT_SQL_SERVER_NAME ') }}"
+      server: "{{ env_var('DBT_SQL_SERVER_NAME') }}"
       port: 1433
       database: ailsqldev
       schema: dbtXero
@@ -16,7 +16,7 @@ xero:
     xero_sl:
       type: sqlserver
       driver: 'ODBC Driver 18 for SQL Server'
-      server: "{{ env_var('DBT_SQL_SERVER_NAME ') }}"
+      server: "{{ env_var('DBT_SQL_SERVER_NAME') }}"
       port: 1433
       database: slsqldev
       schema: dbtXero
